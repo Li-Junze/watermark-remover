@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "watermark-remover"
+version = "1.0.0"
+description = "本地运行的纯色水印去除工具（PyQt5）· Local flat-color watermark remover for PDFs & images, fully offline"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Li-Junze" }]
+keywords = ["watermark", "watermark-remover", "pdf", "image", "pyqt5", "去水印"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: X11 Applications :: Qt",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Chinese (Simplified)",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Multimedia :: Graphics :: Editors",
+]
+dependencies = [
+    "PyQt5>=5.15",
+    "PyMuPDF>=1.24",
+    "numpy>=1.24",
+    "Pillow>=9.0",
+]
+
+[project.gui-scripts]
+watermark-remover = "watermark_remover.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
